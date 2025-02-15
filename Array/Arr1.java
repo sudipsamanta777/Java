@@ -2,13 +2,6 @@ package Java.Array;
 
 public class Arr1 {
     public static void main(String[] args) {
-//        int[] a = {1,2,3,4,5};
-////        int[] b = new int [a.length];
-//        for(int j = 0, i =a.length-1; i>= 0; i--){
-////            b[j] = a[i];
-//            System.out.print(a[i]);
-////            j++;
-//        }
 
         int m = 12;
         if(m==2){
