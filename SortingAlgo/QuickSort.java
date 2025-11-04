@@ -4,6 +4,34 @@ import java.util.Arrays;
 
 public class QuickSort {
     static  int partition(int[] arr, int low, int high){
+        // using while loop
+        int pivot = arr[low];
+        int i = low;
+        int j = high;
+
+        while(i < j) {
+            while(arr[i] <= pivot && i <= high-1) {
+                i++;
+            }
+
+            while(arr[j] > pivot && j >= low+1) {
+                j--;
+            }
+
+            if(i < j) {
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        int temp = arr[j];
+        arr[j] = arr[low];
+        arr[low] = temp;
+
+        return j;
+
+        // using for loop
+        /*
         int pivot = arr[high];
         int i = low-1;
         for(int j = low; j<high; j++){
@@ -18,6 +46,7 @@ public class QuickSort {
         arr[i+1] = arr[high];
         arr[high] = temp;
         return  i+1;
+        */
     }
     static void quickSort(int[] arr, int low, int high){
         if(low < high){
