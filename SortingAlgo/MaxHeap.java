@@ -8,7 +8,7 @@ public class MaxHeap {
     int size;
     int[] heap;
 
-    MaxHeap(int c){
+    MaxHeap(int c){ // constructor for creating new MaxHeap
         this.capacity = c;
         heap = new int[c];
         this.size = 0;
